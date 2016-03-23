@@ -1,11 +1,11 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Quantitative Watchlist";
 }
 @section featured {
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
+                <h1>@ViewBag.Title</h1>
                 <h2>@ViewBag.Message</h2>
             </hgroup>
            @* <p>
@@ -29,16 +29,14 @@
                 <tr>
                     <td>30 Day Z-Score</td>
                     <td>@item._30DayZScore</td>
-                </tr>
-                 <tr>
+                    <td>&nbsp;</td>
                     <td>60 Day Z-Score</td>
                     <td>@item._60DayZScore</td>
                 </tr>
                 <tr>
                     <td>30 Day Dynamic Liquidity</td>
                     <td>@item._30DayLiq</td>
-                </tr>
-                <tr>
+                    <td>&nbsp;</td>
                     <td>60 Day Dynamic Liquidity</td>
                     <td>@item._60DayLiq</td>
                 </tr>
