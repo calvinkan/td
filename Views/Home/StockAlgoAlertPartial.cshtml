@@ -80,10 +80,14 @@
 
         //$('#scrollPos').val($(document).scrollTop());
 
+
         $.ajax({
             url: "../Home/StockAA_Partial",
             data: { "PageNum": pageNum },
             type: "POST",
+            beforeSend: function () {
+
+            },
             cache: false,
             success: function (data) {
                 $('#stocklistLabel').hide();
