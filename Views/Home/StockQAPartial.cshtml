@@ -1,0 +1,72 @@
+﻿@model tdweb.Models.StockData.QAListing
+
+@if (Model.StockList != null)
+{
+    <p>
+    @Model.CurrentPageNum of @Model.TotalPageNum
+    <br />
+
+    @for (int i = 0; i < @Model.TotalPageNum; i++)
+			{
+                if ((i + 1) == @Model.CurrentPageNum)
+                {
+                    @(i + 1)
+                }
+                else
+                {
+        <a href="#" onclick="reloadData(@(i + 1));" >@(i + 1)</a>
+                }
+            }
+    </p>
+    
+<ol class="round">
+    @foreach (dynamic item in Model.StockList)
+    {
+        <li>
+            <h5>@item.Number. @item.StockName (@item.StockID)</h5>
+            <table>
+                <tr>
+                    <td>30 Day Z-Score</td>
+                    <td>@item._30DayZScore</td>
+                    <td>&nbsp;</td>
+                    <td>60 Day Z-Score</td>
+                    <td>@item._60DayZScore</td>
+                </tr>
+                <tr>
+                    <td>30 Day Dynamic Liquidity</td>
+                    <td>@item._30DayLiq</td>
+                    <td>&nbsp;</td>
+                    <td>60 Day Dynamic Liquidity</td>
+                    <td>@item._60DayLiq</td>
+                </tr>
+            </table>
+        </li>
+    }
+</ol>
+}
+
+
+
+<script type="text/javascript">
+
+    function reloadData(pagenum) {
+
+        //$('#scrollPos').val($(document).scrollTop());
+
+        $.ajax({
+            url: "../Home/StockQA_Partial",
+            data: { "PageNum": pagenum },
+            type: "POST",
+            cache: false,
+            success: function (data) {
+                $('#stocklistLabel').hide();
+                $("#stockQAPartial").html(data);
+            },
+            error: function () {
+                alert('uh oh...');
+            }
+        });
+    }
+    
+
+</script>
