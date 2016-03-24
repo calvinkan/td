@@ -1,4 +1,5 @@
-﻿@{
+﻿@model tdweb.Models.StockData.AAListing
+@{
     ViewBag.Title = "AlgoAlert";
 }
 @section featured {
@@ -13,3 +14,11 @@
 }
 
 <h3>Stock Listing</h3>
+<div id="stockAAPartial">
+    <h2>@Html.Label("stocklistLabel", "Loading...")</h2>
+    @{ Html.RenderPartial("StockAlgoAlertPartial", Model); }
+</div>
+
+<script type="text/javascript">
+    $("#StockAlgoAlertPartial").load(reloadDataAA(1));
+</script>

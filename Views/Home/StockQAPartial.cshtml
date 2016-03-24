@@ -3,7 +3,7 @@
 @if (Model.StockList != null)
 {
     <p>
-    @Model.CurrentPageNum of @Model.TotalPageNum
+    @Model.CurrentPageNum of @Model.TotalPageNum (Total @Model.TotalRecords)
     <br />
 
     @for (int i = 0; i < @Model.TotalPageNum; i++)

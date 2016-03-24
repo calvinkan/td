@@ -1,0 +1,99 @@
+﻿@model tdweb.Models.StockData.AAListing
+
+
+
+
+@if (Model.StockList != null)
+{
+
+     <p>
+    @Model.CurrentPageNum of @Model.TotalPageNum  (Total @Model.TotalRecords)
+    <br />
+
+    @for (int i = 0; i < @Model.TotalPageNum; i++)
+    {
+        if ((i + 1) == @Model.CurrentPageNum)
+        {
+                    @(i + 1)
+        }
+        else
+        {
+        <a href="#" onclick="reloadDataAA(@(i + 1));" >@(i + 1)</a>
+        }
+    }
+    </p>
+    
+<ol class="round">
+    @foreach (dynamic item in Model.StockList)
+    {
+        <li>
+            <h5>@item.Number. @item.StockName (@item.StockID)</h5>
+            <table>
+                <tr>
+                    <td>Algo date</td>
+                    <td>@item.NewsDateTime</td>
+                </tr>
+                <tr>
+                    <td>Quarter Report Date</td>
+                    <td>@item.QuarterRptDate</td>
+                </tr>
+                <tr>
+                    <td>PBTSuprisePtChg</td>
+                    <td>@item.PBTSuprisePtChg</td>
+                </tr>
+                <tr>
+                    <td>PBTCurrentQuarter</td>
+                    <td>@item.PBTCurrentQuarter</td>
+                </tr>
+                <tr>
+                    <td>PBTPrevQuarter</td>
+                    <td>@item.PBTPrevQuarter</td>
+                </tr>
+                 <tr>
+                    <td>RevSuprisePtChg</td>
+                    <td>@item.RevSuprisePtChg</td>
+                </tr>
+                <tr>
+                    <td>RevCurrentQuarter</td>
+                    <td>@item.RevCurrentQuarter</td>
+                </tr>
+                <tr>
+                    <td>RevPrevQuarter</td>
+                    <td>@item.RevPrevQuarter</td>
+                </tr>
+                 <tr>
+                    <td>Days90DHigh</td>
+                    <td>@item.Days90DHigh</td>
+                </tr>
+            </table>
+        </li>
+    }
+</ol>
+}
+
+
+
+
+<script type="text/javascript">
+
+    function reloadDataAA(pageNum) {
+
+        //$('#scrollPos').val($(document).scrollTop());
+
+        $.ajax({
+            url: "../Home/StockAA_Partial",
+            data: { "PageNum": pageNum },
+            type: "POST",
+            cache: false,
+            success: function (data) {
+                $('#stocklistLabel').hide();
+                $("#stockAAPartial").html(data);
+            },
+            error: function () {
+                alert('uh oh...');
+            }
+        });
+    }
+    
+
+</script>
