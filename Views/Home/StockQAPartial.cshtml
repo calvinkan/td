@@ -3,7 +3,7 @@
 @if (Model.StockList != null)
 {
     <nav>
-    <ul class="pagination">
+    <ul class="pagination pagination-sm">
     @Model.CurrentPageNum of @Model.TotalPageNum (Total @Model.TotalRecords)
     <br />
     <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
@@ -11,11 +11,11 @@
 			{
                 if ((i + 1) == @Model.CurrentPageNum)
                 {
-                    <li class="active">@(i + 1)</li>
+                    <li class="active"><span>@(i + 1)</span></li>
                 }
                 else
                 {
-        <li><a href="#" onclick="reloadData(@(i + 1));" >@(i + 1)</a></li>
+                    <li><a href="#" onclick="reloadData(@(i + 1));" >@(i + 1)</a></li>
                 }
             }
     <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
