@@ -18,7 +18,7 @@
                     <li><a href="#" onclick="reloadData(@(i + 1));" >@(i + 1)</a></li>
                 }
             }
-    <li><a href="#" onclick="reloadData(@Model.CurrentPageNum+1);" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    <li><a href="#" onclick="reloadData( (@Model.CurrentPageNum+1) < @Model.TotalPageNum ? @Model.CurrentPageNum+1 : return) );" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
     </ul>
     </nav>
     
@@ -53,7 +53,6 @@
     function reloadData(pagenum) {
     	
     	if (pagenum <= 0) return;
-    	if (@Model.TotalPageNum < pagenum) return;
     	//if (pagenum > @Model.TotalPageNum) return;
     	
         //$('#scrollPos').val($(document).scrollTop());
