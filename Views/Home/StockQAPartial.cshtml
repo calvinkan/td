@@ -51,7 +51,9 @@
 <script type="text/javascript">
 
     function reloadData(pagenum) {
-
+    	
+    	if (pagenum <= 0) return;
+    	
         //$('#scrollPos').val($(document).scrollTop());
         $('#stocklistLabel').show();
 
