@@ -18,7 +18,7 @@
                     <li><a href="#" onclick="reloadData(@(i + 1));" >@(i + 1)</a></li>
                 }
             }
-    <li><a href="#" onclick="reloadData( ((@Model.CurrentPageNum+1) < @Model.TotalPageNum) ? @Model.CurrentPageNum+1 : -1) );" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    <li><a href="#" onclick="reloadData( (@Model.CurrentPageNum+1) < @Model.TotalPageNum ? @Model.CurrentPageNum+1 : -1 );" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
     </ul>
     </nav>
     
