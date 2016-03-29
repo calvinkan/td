@@ -42,7 +42,8 @@
                     <li>@Html.ActionLink("Quantitative", "Index", "Home")</li>
                     <li>@Html.ActionLink("AlgoAlert", "AlgoAlert", "Home")</li>
                     @*  <li><a href="#">@Html.ActionLink("About", "About", "Home")</a></li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.Partial("_LoginPartial")</li> *@
                   </ul>
                   <form class="navbar-form navbar-right">
                     <input type="text" class="form-control" placeholder="Search...">
@@ -50,19 +51,6 @@
                 </div>
             </div>
         </nav>
-
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title"></p>
-                </div>
-                <div class="float-right">
-                  @*  <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>*@
-                </div>
-            </div>
-        </header>
 
         <div id="body" class="container-fluid">
             <div class="row">
@@ -83,17 +71,13 @@
         </div>
 
         <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year -My TD</p>
-                </div>
-            </div>
+            <p>&copy; @DateTime.Now.Year -My TD</p>
         </footer>
         
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="~/Scripts/jquery.min.js"><\/script>')</script>
         <script src="~/Scripts/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
