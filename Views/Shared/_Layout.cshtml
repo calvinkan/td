@@ -1,18 +1,56 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>@ViewBag.Title - Labs</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
+        <!-- TODO: Clean-up -->
         @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")        
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/modernizr")
         @RenderSection("scripts", required: false)
         <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <link href="~/Content/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="~/Content/dashboard.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
     </head>
     <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Project name</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Help</a></li>
+                  </ul>
+                  <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                  </form>
+                </div>
+            </div>
+        </nav>
+
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
@@ -47,5 +85,14 @@
             </div>
         </footer>
         
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="~/Scripts/jquery.min.js"><\/script>')</script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="~/Scripts/ie10-viewport-bug-workaround.js"></script>
+
     </body>
 </html>

@@ -11,7 +11,7 @@
 			"file": "Content/Site.css",
 			"settings":
 			{
-				"buffer_size": 13148,
+				"buffer_size": 13159,
 				"line_ending": "Windows"
 			}
 		},
@@ -19,7 +19,7 @@
 			"file": "Views/Home/StockQAPartial.cshtml",
 			"settings":
 			{
-				"buffer_size": 2049,
+				"buffer_size": 2293,
 				"line_ending": "Windows"
 			}
 		},
@@ -109,7 +109,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -118,15 +118,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13148,
+						"buffer_size": 13159,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								70,
-								70
+								10,
+								10
 							]
 						],
 						"settings":
@@ -136,10 +136,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5201.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -148,15 +148,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2049,
+						"buffer_size": 2293,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								938,
-								938
+								0,
+								0
 							]
 						],
 						"settings":
@@ -169,7 +169,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
