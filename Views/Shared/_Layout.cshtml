@@ -8,11 +8,12 @@
         <title>@ViewBag.Title - Labs</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
+        
         @Scripts.Render("~/bundles/modernizr")        
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
         <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        @Styles.Render("~/Content/css")
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <link href="~/Content/ie10-viewport-bug-workaround.css" rel="stylesheet">
         <!-- Custom styles for this template -->
