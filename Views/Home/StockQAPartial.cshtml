@@ -7,21 +7,35 @@
         @foreach (dynamic item in Model.StockList)
         {
             <li>
-                <h5>@item.Number. @item.StockName (@item.StockID)</h5>
-                <table>
-                    <tr>
-                        <td>Day Z-Score</td>
-                        <td>(30D) @item._30DayZScore</td>
-                        <td>&nbsp;</td>
-                        <td>(60D) @item._60DayZScore</td>
-                    </tr>
-                    <tr>
-                        <td>Dynamic Liquidity</td>
-                        <td>(30D) @item._30DayLiq</td>
-                        <td>&nbsp;</td>
-                        <td>(60D) @item._60DayLiq</td>
-                    </tr>
-                </table>
+                <div class="stockWrapper">
+                    <h5>@item.Number. @item.StockName (@item.StockID)</h5>
+                    <div class="dayZ">
+                        <span class="stockInfoType">Day Z-Score</span>
+                        <table class="stockTable">
+                            <tr>
+                                <th>30D</th>
+                                <th>60D</th>
+                            </tr>
+                            <tr>
+                                <td>@item._30DayZScore</td>
+                                <td>@item._60DayZScore</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="dynamicLiq">
+                        <span class="stockInfoType">Dynamic Liquidity</span>
+                        <table class="stockTable">
+                            <tr>
+                                <th>30D</th>
+                                <th>60D</th>
+                            </tr>
+                            <tr>
+                                <td>@item._30DayLiq</td>
+                                <td>@item._60DayLiq</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </li>
         }
     </ul>

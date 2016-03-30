@@ -32,6 +32,42 @@ body {
 /* Stock Listing */
 .stockItem {
 	list-style: none;
+	padding-left: 0;
+}
+
+.stockWrapper {
+	background-color: #314866;
+	border-radius: 10px;
+}
+
+.stockWrapper h5 {
+	color: #21C684;
+}
+
+.dayZ, .dynamicLiq {
+	background-color: #3A5475;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.stockInfoType {
+	color: rgba(255,255,255,.75);
+}
+
+.stockTable {
+	width: 100%;
+}
+
+.stockTable th, .stockTable td {
+	text-align: center;
+}
+
+.stockTable th {
+	color: rgba(255,255,255,.25);
+}
+
+.stockTable td {
+	color: #15A5FA;
 }
 
 footer {
