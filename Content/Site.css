@@ -1,4 +1,27 @@
-﻿footer {
+﻿/* Color Guide */
+/*
+Accent Color 1 (for title)	#21C684
+Accent Color 2 (for active)	#15A5FA
+/*
+
+
+
+/* Global Setting */
+body {
+	background-color: #1F2D40;
+	color: #fff;
+}
+
+.navbar-inverse {
+	background-color: #375173;
+}
+
+/* Header */
+.featured h1 {
+	color: #21C684;
+}
+
+footer {
     background-color: #222;
     color: #999;
     padding: 10px;
