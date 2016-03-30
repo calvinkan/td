@@ -1,74 +1,74 @@
 ﻿@model tdweb.Models.StockData.AAListing
 
-
-
-
 @if (Model.StockList != null)
-{
+{  
+    <ul class="stockItem list-inline">
+        @foreach (dynamic item in Model.StockList)
+        {
+            <li class="col-md-3">
+                <div class="stockWrapper">
+                    <h5>@item.Number. @item.StockName (@item.StockID)</h5>
+                    <table>
+                        <tr>
+                            <td>Algo date</td>
+                            <td>@item.NewsDateTime</td>
+                        </tr>
+                        <tr>
+                            <td>Quarter Report Date</td>
+                            <td>@item.QuarterRptDate</td>
+                        </tr>
+                        <tr>
+                            <td>PBTSuprisePtChg</td>
+                            <td>@item.PBTSuprisePtChg</td>
+                        </tr>
+                        <tr>
+                            <td>PBTCurrentQuarter</td>
+                            <td>@item.PBTCurrentQuarter</td>
+                        </tr>
+                        <tr>
+                            <td>PBTPrevQuarter</td>
+                            <td>@item.PBTPrevQuarter</td>
+                        </tr>
+                         <tr>
+                            <td>RevSuprisePtChg</td>
+                            <td>@item.RevSuprisePtChg</td>
+                        </tr>
+                        <tr>
+                            <td>RevCurrentQuarter</td>
+                            <td>@item.RevCurrentQuarter</td>
+                        </tr>
+                        <tr>
+                            <td>RevPrevQuarter</td>
+                            <td>@item.RevPrevQuarter</td>
+                        </tr>
+                         <tr>
+                            <td>Days90DHigh</td>
+                            <td>@item.Days90DHigh</td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+        }
+    </ul>
 
-     <p>
-    @Model.CurrentPageNum of @Model.TotalPageNum  (Total @Model.TotalRecords)
+    <ul class="pagination clearfix">
+    Page @Model.CurrentPageNum of @Model.TotalPageNum  (Total @Model.TotalRecords)
     <br />
 
     @for (int i = 0; i < @Model.TotalPageNum; i++)
     {
+        <li><a href="#" onclick="reloadData(@Model.CurrentPageNum-1);" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
         if ((i + 1) == @Model.CurrentPageNum)
         {
-                    @(i + 1)
+            <li class="active"><span>@(i + 1)</span></li>
         }
         else
         {
-        <a href="#" onclick="reloadDataAA(@(i + 1));" >@(i + 1)</a>
+            <li><a href="#" onclick="reloadDataAA(@(i + 1));" >@(i + 1)</a></li>
         }
+        <li><a href="#" onclick="reloadData( (@Model.CurrentPageNum+1) <= @Model.TotalPageNum ? @Model.CurrentPageNum+1 : -1 );" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
     }
-    </p>
-    
-<ul class="stockItem">
-    @foreach (dynamic item in Model.StockList)
-    {
-        <li>
-            <h5>@item.Number. @item.StockName (@item.StockID)</h5>
-            <table>
-                <tr>
-                    <td>Algo date</td>
-                    <td>@item.NewsDateTime</td>
-                </tr>
-                <tr>
-                    <td>Quarter Report Date</td>
-                    <td>@item.QuarterRptDate</td>
-                </tr>
-                <tr>
-                    <td>PBTSuprisePtChg</td>
-                    <td>@item.PBTSuprisePtChg</td>
-                </tr>
-                <tr>
-                    <td>PBTCurrentQuarter</td>
-                    <td>@item.PBTCurrentQuarter</td>
-                </tr>
-                <tr>
-                    <td>PBTPrevQuarter</td>
-                    <td>@item.PBTPrevQuarter</td>
-                </tr>
-                 <tr>
-                    <td>RevSuprisePtChg</td>
-                    <td>@item.RevSuprisePtChg</td>
-                </tr>
-                <tr>
-                    <td>RevCurrentQuarter</td>
-                    <td>@item.RevCurrentQuarter</td>
-                </tr>
-                <tr>
-                    <td>RevPrevQuarter</td>
-                    <td>@item.RevPrevQuarter</td>
-                </tr>
-                 <tr>
-                    <td>Days90DHigh</td>
-                    <td>@item.Days90DHigh</td>
-                </tr>
-            </table>
-        </li>
-    }
-</ul>
+    </ul>
 }
 
 

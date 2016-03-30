@@ -42,10 +42,13 @@ body {
 	margin-bottom: 15px;
 }
 
+.stockWrapper:hover {
+	background-color: #375273;
+}
+
 .stockWrapper h5 {
 	color: #21C684;
 	font-size: 16px;
-	min-height: 50px;
 }
 
 .dayZ, .dynamicLiq {
@@ -53,7 +56,7 @@ body {
 	border-radius: 5px;
 	text-align: center;
 	margin-bottom: 1px;
-	padding-bottom: 5px 0;
+	padding: 5px 0;
 }
 
 .stockInfoType {
