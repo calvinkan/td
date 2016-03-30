@@ -39,10 +39,12 @@ body {
 	background-color: #314866;
 	border-radius: 10px;
 	padding: 15px;
+	margin-bottom: 15px;
 }
 
 .stockWrapper h5 {
 	color: #21C684;
+	font-size: 18px;
 }
 
 .dayZ, .dynamicLiq {
@@ -54,7 +56,7 @@ body {
 
 .stockInfoType {
 	color: rgba(255,255,255,.75);
-	font-size: 18px;
+	margin: 8px 0 4px 0;
 }
 
 .stockTable {
@@ -67,10 +69,13 @@ body {
 
 .stockTable th {
 	color: rgba(255,255,255,.25);
+	font-weight: normal;
 }
 
 .stockTable td {
 	color: #15A5FA;
+	font-size: 22px;
+	padding-bottom: 8px;
 }
 
 footer {

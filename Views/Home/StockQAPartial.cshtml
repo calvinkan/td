@@ -3,10 +3,10 @@
 @if (Model.StockList != null)
 {
     
-    <ul class="stockItem">
+    <ul class="stockItem list-inline">
         @foreach (dynamic item in Model.StockList)
         {
-            <li>
+            <li class="col-md-3">
                 <div class="stockWrapper">
                     <h5>@item.Number. @item.StockName (@item.StockID)</h5>
                     <div class="dayZ">
