@@ -35,6 +35,11 @@ body {
 	padding-left: 0;
 }
 
+@keyframes stockMoAnim {
+	from {background-color: #314866;}
+	to {background-color: #3A5475;}
+}
+
 .stockWrapper {
 	background-color: #314866;
 	border-radius: 10px;
@@ -43,12 +48,16 @@ body {
 }
 
 .stockWrapper:hover {
-	background-color: #375273;
+	background-color: #3A5475;
+	animation-name: stockMoAnim;
+	animation-duration: 3s;
 }
 
 .stockWrapper h5 {
 	color: #21C684;
 	font-size: 16px;
+	margin-top: 0px;
+	font-weight: normal;
 }
 
 .dayZ, .dynamicLiq {
@@ -60,7 +69,7 @@ body {
 }
 
 .stockInfoType {
-	color: rgba(255,255,255,.75);
+	color: rgba(255,255,255,.65);
 	padding-bottom: 4px;
 }
 
