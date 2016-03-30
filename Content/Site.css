@@ -50,7 +50,7 @@ body {
 .stockWrapper:hover {
 	background-color: #3A5475;
 	animation-name: stockMoAnim;
-	animation-duration: 3s;
+	animation-duration: 2s;
 }
 
 .stockWrapper h5 {
