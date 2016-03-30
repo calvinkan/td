@@ -40,8 +40,8 @@
         }
     </ul>
 
-    <ul class="pagination pagination-sm">
-    @Model.CurrentPageNum of @Model.TotalPageNum (Total @Model.TotalRecords)
+    <ul class="pagination">
+    Page @Model.CurrentPageNum of @Model.TotalPageNum (Total @Model.TotalRecords)
     <br />
     <li><a href="#" onclick="reloadData(@Model.CurrentPageNum-1);" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
     @for (int i = 0; i < @Model.TotalPageNum; i++)

@@ -44,7 +44,8 @@ body {
 
 .stockWrapper h5 {
 	color: #21C684;
-	font-size: 18px;
+	font-size: 16px;
+	min-height: 50px;
 }
 
 .dayZ, .dynamicLiq {
@@ -52,11 +53,12 @@ body {
 	border-radius: 5px;
 	text-align: center;
 	margin-bottom: 1px;
+	padding-bottom: 5px 0;
 }
 
 .stockInfoType {
 	color: rgba(255,255,255,.75);
-	margin: 8px 0 4px 0;
+	padding-bottom: 4px;
 }
 
 .stockTable {
@@ -74,8 +76,18 @@ body {
 
 .stockTable td {
 	color: #15A5FA;
-	font-size: 22px;
-	padding-bottom: 8px;
+	font-size: 16px;
+}
+
+.pagination>li>a, .pagination>li>span {
+	background-color: #314866;
+	border: 1px solid rgba(255,255,255,.15);
+	color: #15A5FA;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+	background-color: #15A5FA;
+	border-color: #15A5FA;
 }
 
 footer {
