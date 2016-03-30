@@ -38,6 +38,7 @@ body {
 .stockWrapper {
 	background-color: #314866;
 	border-radius: 10px;
+	padding: 15px;
 }
 
 .stockWrapper h5 {
@@ -48,10 +49,12 @@ body {
 	background-color: #3A5475;
 	border-radius: 5px;
 	text-align: center;
+	margin-bottom: 1px;
 }
 
 .stockInfoType {
 	color: rgba(255,255,255,.75);
+	font-size: 18px;
 }
 
 .stockTable {
