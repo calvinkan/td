@@ -2,13 +2,19 @@
 /*
 Accent Color 1 (for title)	#21C684
 Accent Color 2 (for active)	#15A5FA
+Blue 1 (Top  bar)			#375173
+Blue 2 (Side bar)			#1F2D40
+Blue 3 (Body)				#2B3F59
 /*
-
-
 
 /* Global Setting */
 body {
-	background-color: #1F2D40;
+	background-color: #2B3F59;
+	color: #fff;
+}
+
+/* Top navbar */
+.navbar-inverse .navbar-brand {
 	color: #fff;
 }
 
@@ -19,10 +25,17 @@ body {
 /* Header */
 .featured h1 {
 	color: #21C684;
+	font-weight: normal;
+	font-size: 32px;
+}
+
+/* Stock Listing */
+.stockItem {
+	list-style: none;
 }
 
 footer {
-    background-color: #222;
-    color: #999;
+    /*background-color: #222;*/
+    color: #fff;
     padding: 10px;
 }
