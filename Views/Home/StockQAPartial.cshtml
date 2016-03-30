@@ -40,7 +40,8 @@
         }
     </ul>
 
-    <ul class="pagination clearfix">
+    <p class="clearfix">
+    <ul class="pagination">
     Page @Model.CurrentPageNum of @Model.TotalPageNum (Total @Model.TotalRecords)
     <br />
     <li><a href="#" onclick="reloadData(@Model.CurrentPageNum-1);" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
@@ -57,6 +58,7 @@
             }
     <li><a href="#" onclick="reloadData( (@Model.CurrentPageNum+1) <= @Model.TotalPageNum ? @Model.CurrentPageNum+1 : -1 );" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
     </ul>
+    </p>
 }
 
 
