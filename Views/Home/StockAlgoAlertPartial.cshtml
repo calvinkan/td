@@ -7,10 +7,9 @@
     <ul class="pagination">
     Page @Model.CurrentPageNum of @Model.TotalPageNum  (Total @Model.TotalRecords)
     <br />
-
+    <li><a href="#" onclick="reloadData(@Model.CurrentPageNum-1);" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
     @for (int i = 0; i < @Model.TotalPageNum; i++)
     {
-        <li><a href="#" onclick="reloadData(@Model.CurrentPageNum-1);" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
         if ((i + 1) == @Model.CurrentPageNum)
         {
             <li class="active"><span>@(i + 1)</span></li>
@@ -19,18 +18,18 @@
         {
             <li><a href="#" onclick="reloadDataAA(@(i + 1));" >@(i + 1)</a></li>
         }
-        <li><a href="#" onclick="reloadData( (@Model.CurrentPageNum+1) <= @Model.TotalPageNum ? @Model.CurrentPageNum+1 : -1 );" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
     }
+    <li><a href="#" onclick="reloadData( (@Model.CurrentPageNum+1) <= @Model.TotalPageNum ? @Model.CurrentPageNum+1 : -1 );" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
     </ul>
     </p>
-    
+
     <ul class="stockItem list-inline">
         @foreach (dynamic item in Model.StockList)
         {
             <li class="col-md-4 col-xs-6">
                 <div class="stockWrapper">
                     <h5>@item.Number. @item.StockName (@item.StockID)</h5>
-                    <table>
+                    <table class="table table-condensed">
                         <tr>
                             <td>Algo date</td>
                             <td>@item.NewsDateTime</td>
